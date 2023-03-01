@@ -15,11 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from MiProyecto.views import bienvenida
-from MiProyecto.views import categoriaEdad
-from MiProyecto.views import momentoActual
-from MiProyecto.views import contenidoHtml
-from MiProyecto.views import plantilla
+from MiProyecto.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +23,10 @@ urlpatterns = [
     path('categoriaEdad/<int:edad>',categoriaEdad), #Conversion a entero en la url
     path('momentoActual/', momentoActual),
     path('contenidoHtml/<nombre>/<int:edad>',contenidoHtml),
-    path('plantilla/',plantilla)
+    path('plantilla/',plantilla),
+    path('plantillaParametros/',plantillaParametros),
+    path('plantillaCargado/',plantillaCargado),
+    path('plantillaShortcut',plantillaShortcut),
+    path('hija1/',plantillaHija1),
+     path('hija2/',plantillaHija2)
 ]

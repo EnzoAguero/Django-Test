@@ -1,0 +1,24 @@
+<!-- Aca cargo todo lo estatico -->
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- LINK DEL CSS -->
+    <link type="text/css" href='{%static "css/navbar.css"%}' rel='stylesheet'/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Variable  -->
+    <title>{%block title%} {%endblock%}</title>
+</head>
+<body>
+    <!-- Se hereda a los hijos con el include -->
+    {% include "navbar.html" %}
+    <h1 style="color:blue">Enzo Aguero</h1>
+    <!-- Variable para el contenido que va a ir en otro html -->
+    {% block content %} 
+    
+    {% endblock%}
+    <p>Este es el pie de pagina</p>
+</body>
+</html>
